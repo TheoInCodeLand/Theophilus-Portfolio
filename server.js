@@ -9,7 +9,6 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Import routes
-const homeRoute = require("./routes/home");
 const aboutRoute = require("./routes/about");
 const servicesRoute = require("./routes/services");
 const portfolioRoute = require("./routes/portfolio");
@@ -17,7 +16,9 @@ const contactRoute = require("./routes/contact");
 const blogRoute = require("./routes/blog");
 
 // Use routes
-app.use("/", homeRoute);
+app.get('/', (req, res)=>{
+    res.render('Home')
+})
 app.use("/about", aboutRoute);
 app.use("/services", servicesRoute);
 app.use("/portfolio", portfolioRoute);
