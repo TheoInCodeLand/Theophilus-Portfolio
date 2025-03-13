@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Portfolio | Website</title>
+  <meta name="title">
+  <meta name="description" content="This is a blog html template made by TheoInCodeLand">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/css/Home.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="/img/hero-banner.png">
+  <link rel="preload" as="image" href="/img/pattern-2.svg">
+  <link rel="preload" as="image" href="/img/pattern-3.svg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="/img/logo.svg" width="119" height="37" alt="Wren logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="/img/logo.svg" width="119" height="37" alt="Wren logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Skills</a>
+          </li>
+
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Projects</a>
+          </li>
+
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Interests</a>
+          </li>
+
+          <!-- <li>
+            <a href="#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+          </li> -->
+
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            
+
+            <div>
+              <p class="card-title">Hello Theophilus !</p>
+
+              <p class="card-subtitle">
+                You have 3 new messages
+              </p>
+            </div>
+          </div>
+
+          <!-- <ul class="link-list">
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Profile</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
+            </li>
+
+          </ul> -->
+
+        </div>
+
+        <p class="copyright-text">
+          
+          Developed by TheoInCodeLand
+        </p>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Download CV</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Hey there!</p>
+
+            <h1 class="headline headline-1 section-title">
+              I'm <span class="span">Theophilus </span>Thobjenae
+            </h1>
+
+            <p class="hero-text">
+              I’m a full-stack web and software developer, crafting seamless, high-performing digital 
+              experiences with clean code and dynamic design.
+            </p>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email_address" placeholder="Send me a message..." required
+                class="input-field" autocomplete="off">
+
+              <button class="btn btn-primary">
+                <span class="span">Let's Connect</span>
+
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_99a90cc54aeed584bc62345017af5f7a.webp" width="327" height="490" alt="Wren Clark" class="w-100">
+
+            <img src="/img/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="/img/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+
+            <img src="/img/pattern-4.svg" width="95" height="95" alt="shape" class="shape shape-3">
+            
+            <img src="/img/pattern-4.svg" width="205" height="205" alt="shape" class="shape shape-4">
+
+
+          </div>
+
+          <img src="/img/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="/img/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TOPICS
+      -->
+
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+
+          <div class="card topic-card">
+
+            <div class="card-content">
+
+              <h2 class="headline headline-2 section-title card-title" id="topic-label">
+                My Expertise...
+              </h2>
+
+              <p class="card-text">
+                Explore my skills and expertise in web development, software engineering, UI/UX design, and more.
+              </p>
+
+              <div class="btn-group">
+                <button class="btn-icon" aria-label="previous" data-slider-prev>
+                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                </button>
+
+                <button class="btn-icon" aria-label="next" data-slider-next>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="slider" data-slider>
+              <ul class="slider-list" data-slider-container>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="https://d1ub0o53i85pdh.cloudfront.net/uploads/2021/09/Facebook-Linkedin-image-template-10.jpg" width="507" height="618" loading="lazy" alt="Sport"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Web Development</span>
+
+                      <p class="slider-subtitle">Front-end & Back-end</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="https://img.wazobia.tech/https://sytbuildr.s3.eu-west-2.amazonaws.com/0406191c-f351-4a58-b164-b9521b3d78c5/typesofsoftwareengineering.jpeg_O1teey?tr=w-1500,cr-0.0.1500.900" width="507" height="618" loading="lazy" alt="Travel"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Software Engineering</span>
+                
+                      <p class="slider-subtitle">Scalable & Efficient Systems</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg" width="507" height="618" loading="lazy" alt="Design"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">UI/UX Design</span>
+                
+                      <p class="slider-subtitle">User-Centered & Interactive</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="https://exalate.com/wp-content/uploads/2023/03/API-Integration-A-Practical-Guide-to-Maximizing-Business-Efficiency-.png" width="507" height="618" loading="lazy" alt="Movie"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">API Integration</span>
+                
+                      <p class="slider-subtitle">Seamless Third-Party Connections</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="https://miro.medium.com/v2/resize:fit:1400/1*szBsfY6lp8A0jb1zOvJ0mw.jpeg" width="507" height="618" loading="lazy" alt="Lifestyle"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Database Management</span>
+                
+                      <p class="slider-subtitle">SQL & NoSQL Solutions</p>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- #Technologies & Skills -->
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Technologies & Skills</span>
+          </h2>
+
+          <p class="section-text">
+            Explore my expertise in modern web and software development.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-node-js"></i>
+
+                <p class="btn-text">node.js</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-solid fa-server"></i>
+
+                <p class="btn-text">express.js</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-js"></i>
+
+                <p class="btn-text">javascript</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-python"></i>
+
+                <p class="btn-text">python</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-react"></i>
+
+                <p class="btn-text">react.js</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-css3"></i>
+
+                <p class="btn-text">css 3</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-html5"></i>
+
+                <p class="btn-text">html</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-solid fa-database"></i>
+
+                <p class="btn-text">mongo db</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-solid fa-database"></i>
+
+                <p class="btn-text">sqlite</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-git"></i>
+
+                <p class="btn-text">git</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-solid fa-code"></i>
+
+                <p class="btn-text">clean code</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <i class="fa-brands fa-java"></i>
+
+                <p class="btn-text">java</p>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- #Featured Projects -->
+
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Featured Projects</span>
+          </h2>
+
+          <p class="section-text">
+            Explore some of my best and most impactful projects that showcase my skills and expertise.
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="/img/featured-1.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Node.js _</a>
+                      <a href="#" class="span hover-2">#FullStack </a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">3 Months</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Car Rental E-Commerce
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="/img/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                  
+                        <p class="card-subtitle">Completed: 2024</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="/img/featured-2.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Node.js _</a>
+                      <a href="#" class="span hover-2"> #SQLite _</a>
+                      <a href="#" class="span hover-2"> #FullStack</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      University Multimedia Blog
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="/img/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                  
+                        <p class="card-subtitle">Completed: 2024</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="/img/featured-3.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Buscor Online Bus Ticket booking system...
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="/img/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                  
+                        <p class="card-subtitle">Completed: 2024</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="/img/featured-4.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Secure And Fully functional Authentication 
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="/img/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                  
+                        <p class="card-subtitle">Completed: 2024</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="/img/featured-5.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Java-Atm-Simulator Application
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="/img/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                  
+                        <p class="card-subtitle">Completed: 2024</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            <span class="span">View More Projects</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="/img/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+      <!-- #Interests & Passions -->
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Interests & Passions</span>
+          </h2>
+
+          <p class="section-text">
+            Fields and topics that inspire my work
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag1.png" width="32" height="32" loading="lazy" alt="Travel"> -->
+
+                <p class="btn-text">Tech Innovations</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag2.png" width="32" height="32" loading="lazy" alt="Culture"> -->
+
+                <p class="btn-text">Machine Learning</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle"> -->
+
+                <p class="btn-text">Startup Solutions</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag4.png" width="32" height="32" loading="lazy" alt="Fashion"> -->
+
+                <p class="btn-text">Chatbot Training</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag5.png" width="32" height="32" loading="lazy" alt="Food"> -->
+
+                <p class="btn-text">Problem Solving</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <!-- <img src="/img/tag6.png" width="32" height="32" loading="lazy" alt="Space"> -->
+
+                <p class="btn-text">Creative Solutions</p>
+              </button>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="footer__section">
+        <div class="container">
+    
+          <div class="card footer">
+    
+            <div class="section footer-top">
+    
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.961221757684!2d28.232195899999997!3d-26.0675237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956b3432cdb189%3A0x7f46d46e30e2a440!2s3%20Vosloo%20St%2C%20Birchleigh%2C%20Kempton%20Park%2C%201621!5e0!3m2!1sen!2sza!4v1741880362361!5m2!1sen!2sza" 
+                width="600" height="450" style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+    
+              <form class="footer-list">
+    
+                <p class="footer-list-title">Message Me</p>
+    
+                <p class="footer-text">
+                  You can reach me on my email for communication...
+                </p>
+    
+                <div class="input-wrapper">
+                  <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+    
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                </div>
+    
+                <div class="input-wrapper">
+                  <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
+                    autocomplete="off">
+    
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="input-wrapper">
+                  <textarea type="email" name="email_address" placeholder="Message" required class="input-field"
+                    autocomplete="off"></textarea>
+                </div>
+    
+                <a href="#" class="btn btn-primary">
+                  <span class="span">Send</span>
+    
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+    
+              </form>
+    
+            </div>
+    
+          </div>
+    
+        </div>
+      </section>
+      <!-- #Blog posts -->
+
+      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
+        <div class="container">
+
+          <div class="post-main">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">Blog posts</span>
+            </h2>
+
+            <p class="section-text">
+              Don't miss out...
+            </p>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="/img/recent-post-1.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <nav aria-label="pagination" class="pagination">
+
+              <a href="#" class="pagination-btn" aria-label="previous page">
+                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+              </a>
+
+              <a href="#" class="pagination-btn">1</a>
+              <a href="#" class="pagination-btn">2</a>
+              <a href="#" class="pagination-btn">3</a>
+              <a href="#" class="pagination-btn" aria-label="more page">...</a>
+
+              <a href="#" class="pagination-btn" aria-label="next page">
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </nav>
+
+          </div>
+
+          <div class="post-aside grid-list">
+
+            <div class="card aside-card insta-card">
+
+              <a href="#" class="logo">
+                <img src="/img/logo.svg" width="119" height="37" loading="lazy" alt="Wren logo">
+              </a>
+
+              <p class="card-text">
+                Follow us on instagram
+              </p>
+
+              <ul class="insta-list">
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="/img/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- #FOOTER -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            
+
+            <p class="footer-list-title">Address</p>
+
+            <address class="footer-text address">
+
+              3 Vosloo Street <br>
+              Birchleigh, Kempton Park, 1621
+
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Categories</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Action</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Business</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Adventure</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Canada</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">America</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Curiosity</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Animal</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dental</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Biology</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Design</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Breakfast</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dessert</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
+            </p>
+
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Developed by <a href="#" class="copyright-link">TheoInCodeLand.</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <span class="span">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
