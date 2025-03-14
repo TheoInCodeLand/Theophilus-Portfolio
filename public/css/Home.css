@@ -1,26 +1,7 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 TheoInCodeLand
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
-    /**
-     * COLORS
-     */
-  
-    /** Background colors */
+    
     --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
     --bg-carolina-blue: hsla(199, 89%, 49%, 1);
     --bg-prussian-blue: hsla(216, 33%, 20%, 1);
@@ -51,11 +32,7 @@
     --white: hsl(0, 0%, 100%, 1);
     --black: hsl(0, 0%, 0%, 1);
   
-    /**
-     * TYPOGRAPHY
-     */
-  
-    /** Font family */
+    
     --fontFamily-noto_sans: 'Noto Sans', sans-serif;
   
     /** Font size */
@@ -79,13 +56,10 @@
     --lineHeight-2: 1.5;
     --lineHeight-4: 1.5;
   
-    /**
-     * BOX SHADOW
-     */
-  
+
     --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
     --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);
-  
+
     /**
      * BORDER RADIUS
      */
@@ -113,14 +87,6 @@
     --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
   
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #RESET
-  \*-----------------------------------*/
   
   *,
   *::before,
@@ -189,15 +155,7 @@
     background-color: var(--bg-carolina-blue);
     border-radius: var(--radius-pill);
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #REUSED STYLE
-  \*-----------------------------------*/
-  
+
   .container { padding-inline: 16px; }
   
   .hover-1,
@@ -324,14 +282,6 @@
     align-items: center;
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #HEADER
-  \*-----------------------------------*/
-  
   .header .btn { display: none; }
   
   .header {
@@ -439,14 +389,6 @@
     font-size: var(--fontSize-8);
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #HERO
-  \*-----------------------------------*/
-  
   .hero-bg { display: none; }
   
   .hero { padding-block-start: calc(var(--section-padding) + 160px); }
@@ -519,10 +461,6 @@
     top: 120px;
     left: 90px;
   }
-  
-  /*-----------------------------------*\
-    #TOPICS
-  \*-----------------------------------*/
   
   .topic-card {
     padding: 24px;
@@ -602,14 +540,6 @@
   
   .slider-subtitle { font-size: var(--fontSize-7); }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #FEATURED
-  \*-----------------------------------*/
-  
   .feature-bg { display: none; }
   
   .feature-list {
@@ -670,14 +600,6 @@
     margin-block-start: 30px;
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #POPULAR TAGS
-  \*-----------------------------------*/
-  
   .tags .grid-list { grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); }
   
   .tag-btn {
@@ -711,12 +633,7 @@
   .footer-list {
     min-width: 40%;
   }
-  
-  
-  /*-----------------------------------*\
-    #RECENT POST
-  \*-----------------------------------*/
-  
+
   .recent-post .container {
     display: grid;
     gap: 50px;
@@ -871,14 +788,6 @@
   
   .insta-post { border-radius: var(--radius-8); }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #FOOTER
-  \*-----------------------------------*/
-  
   .footer {
     padding-inline: 10px;
     border-radius: var(--radius-48);
@@ -988,14 +897,6 @@
     transform: translateY(-2px);
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #BACK TO TOP
-  \*-----------------------------------*/
-  
   .back-top-btn {
     position: fixed;
     bottom: 20px;
@@ -1022,18 +923,6 @@
     transform: translateY(-10px);
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #MEDIA QUERIES
-  \*-----------------------------------*/
-  
-  /**
-   * responsive for large than 575px screen
-   */
-  
   @media (min-width: 275px) {
     .footer {
       border-radius: 12px;
@@ -1056,33 +945,13 @@
   
   @media (min-width: 575px) {
   
-    /**
-     * CUSTOM PROPERTY
-     */
-  
     :root {
-  
-      /**
-       * typography
-       */
-  
-      /* font size */
       --fontSize-1: 4.4rem;
       --fontSize-2: 3.5rem;
-  
-      /**
-       * spacing
-       */
   
       --section-padding: 100px;
   
     }
-  
-  
-  
-    /**
-     * REUSED STYLE
-     */
   
     .container {
       max-width: 540px;
@@ -1092,24 +961,12 @@
   
     .headline-3 { --fontSize-2: 2.4rem; }
   
-  
-  
-    /**
-     * HEADER
-     */
-  
     .header .btn {
       display: block;
       margin-inline-start: auto;
     }
   
     .header.active { padding-block: 20px; }
-  
-  
-  
-    /**
-     * HERO
-     */
   
     .hero { position: relative; }
   
@@ -1133,23 +990,11 @@
   
     .shape-2 { left: 60px; }
   
-  
-  
-    /**
-     * TOPICS
-     */
-  
     .topics .section-title { font-size: 2rem; }
   
     .slider { --slider-items: 3; }
   
     .slider-item { min-width: calc(33.33% - 13.33px); }
-  
-  
-  
-    /**
-     * FEATURE
-     */
   
     .feature { position: relative; }
   
@@ -1161,12 +1006,6 @@
       pointer-events: none;
     }
   
-  
-  
-    /**
-     * RECENT POST
-     */
-  
     .recent-post-card {
       grid-template-columns: 0.5fr 1fr;
       gap: 20px;
@@ -1176,12 +1015,6 @@
       width: 42px;
       height: 42px;
     }
-  
-  
-  
-    /**
-     * ASIDE
-     */
   
     .aside-title { --fontSize-2: 2rem; }
   
@@ -1200,45 +1033,15 @@
   
   }
   
-  
-  
-  
-  
-  /**
-   * responsive for large than 768px screen
-   */
-  
   @media (min-width: 768px) {
   
-    /**
-     * CUSTOM PROPERTY
-     */
-  
     :root {
-  
-      /**
-       * typography
-       */
-  
-      /* font size */
       --fontSize-1: 6.4rem;
       --fontSize-2: 4.5rem;
   
     }
   
-  
-  
-    /**
-     * REUSED STYLE
-     */
-  
     .container { max-width: 720px; }
-  
-  
-  
-    /**
-     * RECENT POST
-     */
   
     .recent-post-card { grid-template-columns: 0.7fr 1fr; }
   
@@ -1256,28 +1059,10 @@
     }
   
   }
-  
-  
-  
-  
-  
-  /**
-   * responsive for large than 992px screen
-   */
-  
+
   @media (min-width: 992px) {
   
-    /**
-     * REUSED STYLE
-     */
-  
     .container { max-width: 930px; }
-  
-  
-  
-    /**
-     * HERO
-     */
   
     .hero { padding-block-start: calc(var(--section-padding) + 80px); }
   
@@ -1286,12 +1071,6 @@
       align-items: center;
     }
   
-  
-  
-    /** 
-     * TOPICS
-     */
-  
     .topic-card {
       display: grid;
       grid-template-columns: 0.3fr 1fr;
@@ -1299,42 +1078,18 @@
       gap: 20px;
     }
   
-  
-  
-    /**
-     * FEATURE
-     */
-  
     .feature-list li:nth-child(-n+2) { width: calc(50% - 15px); }
   
     .feature-list li:nth-child(n+3) { width: calc(33.33% - 20px); }
   
     .feature-list li:nth-child(n+3) .headline-3 { --fontSize-2: 2rem; }
   
-  
-  
-    /**
-     * TAGS
-     */
-  
     .tags .grid-list { grid-template-columns: repeat(4, 1fr); }
-  
-  
-  
-    /**
-     * RECENT POST
-     */
   
     .recent-post .container {
       grid-template-columns: 1fr 0.6fr;
       align-items: flex-start;
     }
-  
-  
-  
-    /**
-     * FOOTER
-     */
   
     .footer-top { 
       flex-direction: column;
@@ -1358,29 +1113,11 @@
   
   }
   
-  
-  
-  
-  
-  /**
-   * responsive for large than 1200px screen
-   */
-  
   @media (min-width: 1200px) {
-  
-    /**
-     * REUSED STYLE
-     */
   
     .container { max-width: 1140px; }
   
     body.nav-active { overflow-y: overlay; }
-  
-  
-  
-    /**
-     * HEADER
-     */
   
     .nav-open-btn,
     .navbar-top,
@@ -1412,28 +1149,10 @@
       transform: translateX(0);
     }
   
-  
-  
-    /**
-     * HERO
-     */
-  
     .hero .container { max-width: 1050px; }
   
-  
-  
-    /**
-     * TAGS
-     */
-  
     .tags .grid-list { grid-template-columns: repeat(6, 1fr); }
-  
-  
-  
-    /**
-     * FOOTER
-     */
-  
+
     .footer-top {
       gap: 40px;
       padding-inline: 120px;
@@ -1447,13 +1166,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Prevent interaction */
+    pointer-events: none;
     overflow: hidden;
   }
   
   .bubble {
     position: absolute;
-    bottom: -50px; /* Start from bottom */
+    bottom: -50px;
     width: 30px;
     height: 30px;
     background-color: var(--bg-carolina-blue);
@@ -1462,7 +1181,7 @@
     animation: floatUp 6s infinite ease-in-out, fadeOut 6s infinite ease-in-out;
   }
   
-  /* Different sizes for variety */
+  
   .bubble:nth-child(2) { width: 40px; height: 40px; animation-delay: 2s; }
   .bubble:nth-child(3) { width: 20px; height: 20px; animation-delay: 4s; }
   .bubble:nth-child(4) { width: 50px; height: 50px; animation-delay: 1s; }
