@@ -289,6 +289,13 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .card-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
   
   .section { padding-block: var(--section-padding); }
   
@@ -639,6 +646,11 @@
     position: relative;
     color: var(--text-wild-blue-yonder);
     z-index: 1;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .feature .card-wrapper .card-btn:hover {
+    color: #0ea7e8;
   }
   
   .feature .card-wrapper .card-btn::before {
