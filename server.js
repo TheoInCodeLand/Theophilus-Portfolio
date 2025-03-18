@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const db = require('./database/portfolio.db');
 
 const app = express();
 app.set("view engine", "ejs");
