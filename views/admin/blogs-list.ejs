@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Blogs</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="page-header">
+            <h2>My Blog Articles</h2>
+            <div>
+                <a href="/admin/dashboard" class="action-btn" style="margin-right: 1rem; color: #94a3b8;">Back</a>
+                <a href="/admin/blogs/add" class="btn-primary action-btn">+ Add New Article</a>
+            </div>
+        </header>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Article Title</th>
+                    <th>Category</th>
+                    <th>Read Time</th>
+                    <th>Link</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (blogs.length === 0) { %>
+                    <tr><td colspan="5" style="text-align:center; padding: 2rem;">No blogs added yet.</td></tr>
+                <% } else { %>
+                    <% blogs.forEach(blog => { %>
+                    <tr>
+                        <td>
+                            <strong><%= blog.title %></strong><br>
+                            <small style="color: #94a3b8;">Added: <%= new Date(blog.created_at).toLocaleDateString() %></small>
+                        </td>
+                        <td><span class="tech-tag"><%= blog.category %></span></td>
+                        <td><%= blog.read_time %></td>
+                        <td>
+                            <a href="<%= blog.external_link %>" target="_blank" style="color: #3b82f6;">
+                                <i class="fa-solid fa-external-link-alt"></i> Open
+                            </a>
+                        </td>
+                        <td>
+                            <form action="/admin/blogs/delete/<%= blog.id %>" method="POST" style="display:inline;" onsubmit="return confirm('Delete this article?');">
+                                <button type="submit" class="action-btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

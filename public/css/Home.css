@@ -1,7 +1,5 @@
 
 :root {
-
-    
     --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
     --bg-carolina-blue: hsla(199, 89%, 49%, 1);
     --bg-prussian-blue: hsla(216, 33%, 20%, 1);
@@ -785,6 +783,116 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
+
+  /* --- CHATBOT STYLES --- */
+  #chat-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s;
+  }
+
+  #chat-toggle-btn:hover { transform: scale(1.1); }
+
+  #chat-widget {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      height: 450px;
+      background: #1e293b; /* Dark theme match */
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      display: none; /* Hidden by default */
+      flex-direction: column;
+      z-index: 1000;
+      overflow: hidden;
+      border: 1px solid #334155;
+  }
+
+  #chat-header {
+      background: #2563eb;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+  }
+
+  #chat-header button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+  }
+
+  #chat-body {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .message {
+      max-width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+  }
+
+  .bot-message {
+      background: #334155;
+      color: #e2e8f0;
+      align-self: flex-start;
+      border-bottom-left-radius: 0;
+  }
+
+  .user-message {
+      background: #2563eb;
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 0;
+  }
+
+  #chat-form {
+      display: flex;
+      padding: 10px;
+      background: #0f172a;
+      border-top: 1px solid #334155;
+  }
+
+  #chat-input {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: white;
+      padding: 8px;
+      border-radius: 4px;
+      outline: none;
+  }
+
+  #chat-form button {
+      background: transparent;
+      color: #2563eb;
+      border: none;
+      font-size: 1.2rem;
+      margin-left: 10px;
+      cursor: pointer;
+  }
   
   .insta-post { border-radius: var(--radius-8); }
   
@@ -1198,3 +1306,65 @@
     100% { opacity: 0; }
   }
   
+  /* =========================================
+   FIX 1: RESPONSIVE CHATBOT
+   ========================================= */
+
+/* Default Desktop Styles (Keep existing, but ensure these are set) */
+#chat-widget {
+    /* ... existing styles ... */
+    z-index: 9999; /* Ensure it sits on top of everything */
+}
+
+/* Mobile Screens (Phones) */
+@media (max-width: 480px) {
+    #chat-widget {
+        width: 90%;          /* Fit within the screen width */
+        right: 5%;           /* Center it horizontally (5% left + 90% width + 5% right) */
+        height: 60vh;        /* Use 60% of screen height so keyboard doesn't hide input */
+        bottom: 80px;        /* Sit above the toggle button */
+        border-radius: 12px;
+    }
+
+    #chat-toggle-btn {
+        width: 50px;         /* Slightly smaller button on mobile */
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* =========================================
+   FIX 2: PROJECT CARDS "GETTING WIDER"
+   ========================================= */
+
+/* Ensure images and videos never overflow their container */
+.img-cover, 
+.card-banner video, 
+.card-banner img {
+    width: 100%;             /* Force full width of the CARD, not the original image size */
+    height: auto;            /* Maintain aspect ratio */
+    max-width: 100%;         /* Prevent stretching beyond screen */
+    display: block;          /* Removes bottom spacing bugs */
+    object-fit: cover;       /* Ensures it fills the box nicely */
+}
+
+/* Constrain the project card itself on mobile */
+@media (max-width: 768px) {
+    .feature-list li {
+        width: 100%;         /* Full width on mobile */
+    }
+
+    .feature-card {
+        margin: 0 auto;      /* Center the card */
+        width: 100%;         /* Ensure it fits container */
+        max-width: 100%;     /* Stop it from forcing horizontal scroll */
+        overflow: hidden;    /* Cut off any rebellious child elements */
+    }
+
+    /* Fix the aspect ratio container if you use one */
+    .card-banner {
+        aspect-ratio: 16 / 9; /* Force a standard video shape */
+        height: auto !important; /* Override hardcoded height */
+    }
+}

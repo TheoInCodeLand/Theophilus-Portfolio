@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Blog Article</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="page-header">
+            <h2>Add New Article</h2>
+            <a href="/admin/blogs" class="action-btn">Cancel</a>
+        </header>
+
+        <form action="/admin/blogs/add" method="POST" enctype="multipart/form-data" class="admin-form">
+            
+            <div class="form-group">
+                <label>Article Title</label>
+                <input type="text" name="title" placeholder="e.g. Solving Two Sum on LeetCode" required>
+            </div>
+
+            <div class="form-group">
+                <label>External Link (Where is the blog?)</label>
+                <input type="url" name="external_link" placeholder="https://leetcode.com/problems/..." required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" name="category" placeholder="e.g. Algorithms / System Design" required>
+                </div>
+                <div class="form-group">
+                    <label>Read Time</label>
+                    <input type="text" name="read_time" placeholder="e.g. 5 mins read" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Cover Image (Upload)</label>
+                <input type="file" name="blogImage" accept="image/*" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Add Article</button>
+        </form>
+    </div>
+</body>
+</html>
