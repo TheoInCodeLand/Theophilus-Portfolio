@@ -29,4 +29,5 @@ const seedAdmin = async () => {
         pool.end();
     }
 };
+
 seedAdmin();
