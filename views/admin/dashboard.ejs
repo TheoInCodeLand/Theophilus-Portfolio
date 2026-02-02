@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Admin</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="admin-nav">
+        <h1>Welcome, <%= firstName %></h1>
+        <a href="/auth/logout" class="btn-danger action-btn">Logout</a>
+    </nav>
+
+    <div class="admin-container">
+        <div class="dashboard-grid">
+            <a href="/admin/profile" class="card">
+                <i class="fa-solid fa-user-gear"></i>
+                <h3>Edit Profile</h3>
+                <p>Update bio, email, address & social links</p>
+            </a>
+
+            <a href="/admin/projects" class="card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Manage Projects</h3>
+                <p><%= stats.projects %> Active Projects</p>
+            </a>
+
+            <a href="/admin/experience" class="card">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Work Experience</h3>
+                <p><%= stats.experience %> Roles Listed</p>
+            </a>
+
+            <a href="/admin/skills" class="card">
+                <i class="fa-solid fa-shapes"></i>
+                <h3>Skills & Tech</h3>
+                <p><%= stats.skills %> Technologies</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

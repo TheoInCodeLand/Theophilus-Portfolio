@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Projects</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="page-header">
+            <h2>My Projects</h2>
+            <div>
+                <a href="/admin/dashboard" class="action-btn" style="margin-right: 1rem; color: #94a3b8;">Back</a>
+                <a href="/admin/projects/add" class="btn-primary action-btn">+ Add New Project</a>
+            </div>
+        </header>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Category</th>
+                    <th>Date Completed</th>
+                    <th>Tech Stack</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% projects.forEach(project => { %>
+                <tr>
+                    <td>
+                        <strong><%= project.title %></strong><br>
+                        <small style="color: #94a3b8;"><%= project.duration_months %> Months dev time</small>
+                    </td>
+                    <td><%= project.category %></td>
+                    <td><%= new Date(project.date_completed).toLocaleDateString() %></td>
+                    <td>
+                        <% if(project.tech_stacks) { %>
+                            <% project.tech_stacks.forEach(tech => { %>
+                                <span class="tech-tag"><%= tech %></span>
+                            <% }) %>
+                        <% } %>
+                    </td>
+                    <td>
+                        <a href="/admin/projects/edit/<%= project.id %>" class="action-btn btn-edit" title="Edit">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+
+                        <form action="/admin/projects/delete/<%= project.id %>" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure?');">
+                            <button type="submit" class="action-btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

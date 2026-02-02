@@ -99,7 +99,7 @@
             
 
             <div>
-              <p class="card-title">Hello Theophilus !</p>
+              <p class="card-title">Hello <%= profile.first_name %> !</p>
 
               <p class="card-subtitle">
                 You have 3 new messages
@@ -153,17 +153,9 @@
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
+      <!-- #Hero Section -->
       <section class="hero" id="home" aria-label="home">
         <div class="container">
 
@@ -172,12 +164,11 @@
             <p class="hero-subtitle">Hey there!</p>
 
             <h1 class="headline headline-1 section-title">
-              I'm <span class="span">Theophilus </span>Thobjenae
+              I'm <span class="span"><%= profile.first_name %> </span><%= profile.last_name %>
             </h1>
 
             <p class="hero-text">
-              I’m a full-stack web and software developer, crafting seamless, high-performing digital 
-              experiences with clean code and dynamic design.
+              <%= profile.professional_summary %>
             </p>
 
             <div class="input-wrapper">
@@ -217,14 +208,7 @@
         </div>
       </section>
 
-
-
-
-
-      <!-- 
-        - #TOPICS
-      -->
-
+      <!-- #Topics & Expertise -->
       <section class="topics" id="topics" aria-labelledby="topic-label">
         <div class="container">
 
@@ -264,9 +248,9 @@
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Web Development</span>
+                      <span class="slider-title">Software development</span>
 
-                      <p class="slider-subtitle">Front-end & Back-end</p>
+                      <p class="slider-subtitle">Full-stack & Mobile Development</p>
                     </div>
 
                   </a>
@@ -281,9 +265,9 @@
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Software Engineering</span>
+                      <span class="slider-title">Automation</span>
                 
-                      <p class="slider-subtitle">Scalable & Efficient Systems</p>
+                      <p class="slider-subtitle">Machine Learning & AI Integration</p>
                     </div>
 
                   </a>
@@ -293,14 +277,14 @@
                   <a href="#" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg" width="507" height="618" loading="lazy" alt="Design"
+                      <img src="https://osswalinfo.com/wp-content/uploads/2024/06/How-To-Take-Your-Data-Analytics-Approach-To-The-Next-Level-in-2023.jpg" width="507" height="618" loading="lazy" alt="Design"
                         class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">UI/UX Design</span>
+                      <span class="slider-title">Data Analysis</span>
                 
-                      <p class="slider-subtitle">User-Centered & Interactive</p>
+                      <p class="slider-subtitle">Extracting Insights from Data</p>
                     </div>
 
                   </a>
@@ -349,7 +333,6 @@
       </section>
 
       <!-- #Technologies & Skills -->
-
       <section class="tags" aria-labelledby="tag-label">
         <div class="container">
 
@@ -363,102 +346,21 @@
           </p>
 
           <ul class="grid-list">
+            <% if (skills && skills.length > 0) { %>
+              
+              <% skills.forEach(skill => { %>
+                <li>
+                  <button class="card tag-btn">
+                    <i class="<%= skill.icon_class %>"></i>
 
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-node-js"></i>
+                    <p class="btn-text"><%= skill.name %></p>
+                  </button>
+                </li>
+              <% }) %>
 
-                <p class="btn-text">node.js</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-solid fa-server"></i>
-
-                <p class="btn-text">express.js</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-js"></i>
-
-                <p class="btn-text">javascript</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-python"></i>
-
-                <p class="btn-text">python</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-react"></i>
-
-                <p class="btn-text">react.js</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-css3"></i>
-
-                <p class="btn-text">css 3</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-html5"></i>
-
-                <p class="btn-text">html</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-solid fa-database"></i>
-
-                <p class="btn-text">mongo db</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-solid fa-database"></i>
-
-                <p class="btn-text">sqlite</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-git"></i>
-
-                <p class="btn-text">git</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-solid fa-code"></i>
-
-                <p class="btn-text">clean code</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <i class="fa-brands fa-java"></i>
-
-                <p class="btn-text">java</p>
-              </button>
-            </li>
+            <% } else { %>
+              <p>No skills listed yet.</p>
+            <% } %>
 
           </ul>
 
@@ -466,7 +368,6 @@
       </section>
 
       <!-- #Featured Projects -->
-
       <section class="section feature" aria-label="feature" id="featured">
         <div class="container">
 
@@ -480,276 +381,86 @@
 
           <ul class="feature-list">
 
-            <li>
-              <div class="card feature-card">
+            <% if (projects.length === 0) { %>
+              <p>No projects added yet. Check back soon!</p>
+            <% } else { %>
+              
+              <% projects.forEach(project => { %>
+              <li>
+                <div class="card feature-card">
 
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <!-- <img src="/img/featured-1.png" width="1602" height="903" loading="lazy" 
-                  alt="Self-observation is the first step of inner unfolding" class="img-cover"> -->
-                  <video src="/img/RentalX.mp4" width="1602" height="903" loading="lazy" preload="auto"
-                    playsinline loop muted class="img-cover"
-                    autoplay controls></video>
-                </figure>
-
-                <div class="card-content">
+                  <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
                     
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Node.js _</a>
-                      <a href="#" class="span hover-2">#FullStack </a>
-                    </div>
+                    <% if (project.video_url && project.video_url.endsWith('.mp4')) { %>
+                      <video src="<%= project.video_url %>" width="1602" height="903" loading="lazy" preload="auto"
+                        playsinline loop muted class="img-cover"
+                        autoplay controls></video>
+                    <% } else if (project.video_url) { %>
+                      <img src="<%= project.video_url %>" width="1602" height="903" loading="lazy"
+                        alt="<%= project.title %>" class="img-cover">
+                    <% } else { %>
+                      <img src="/img/placeholder.png" width="1602" height="903" loading="lazy"
+                        alt="Project Placeholder" class="img-cover">
+                    <% } %>
 
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  </figure>
 
-                      <span class="span">3 Months</span>
-                    </div>
-                  </div>
+                  <div class="card-content">
 
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Car Rental E-Commerce
-                    </a>
-                  </h3>
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <% if (project.tech_stacks) { %>
+                          <% project.tech_stacks.forEach(stack => { %>
+                            <a href="#" class="span hover-2">#<%= stack %></a>
+                          <% }) %>
+                        <% } %>
+                      </div>
 
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                  
-                        <p class="card-subtitle">Completed: 2024</p>
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <span class="span"><%= project.duration_months %> Months Dev</span>
                       </div>
                     </div>
 
-                    <a href="https://github.com/TheoInCodeLand/RentGo" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="https://rentgo-joburg.onrender.com" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
+                    <h3 class="headline headline-3">
+                      <a href="<%= project.demo_link || '#' %>" class="card-title hover-2">
+                        <%= project.title %>
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+
+                      <div class="profile-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Author"
+                          class="profile-banner">
+
+                        <div>
+                          <p class="card-subtitle">Completed: <%= new Date(project.date_completed).getFullYear() %></p>
+                        </div>
+                      </div>
+
+                      <% if (project.github_link) { %>
+                        <a href="<%= project.github_link %>" class="card-btn" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
+                      <% } %>
+                      
+                      <% if (project.demo_link) { %>
+                        <a href="<%= project.demo_link %>" class="card-btn" target="_blank"><i class="fa-solid fa-globe"></i> Demo</a>
+                      <% } %>
+
+                    </div>
 
                   </div>
 
                 </div>
+              </li>
+              <% }) %>
 
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                    <!-- <img src="/img/featured-2.png" width="1602" height="903" loading="lazy"
-                        alt="Self-observation is the first step of inner unfolding" class="img-cover"> -->
-                        
-                    <video src="/img/UMP _ University Of Mpumalanga - Google Chrome 2024-12-16 16-46-30.mp4" 
-                    autoplay playinsync preload="auto" width="1602" height="903" class="img-cover" controls></video>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Node.js _</a>
-                      <a href="#" class="span hover-2"> #SQLite _</a>
-                      <a href="#" class="span hover-2"> #FullStack</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      University Multimedia Blog
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                  
-                        <p class="card-subtitle">Completed: 2024</p>
-                      </div>
-                    </div>
-
-                    <a href="https://github.com/TheoInCodeLand/University-Website" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="https://university-website-9upr.onrender.com/" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="/img/featured-3.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Ecommerse</a>
-                      <a href="#" class="span hover-2">#Django</a>
-                      <a href="#" class="span hover-2">#API</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Buscor Online Bus Ticket booking system...
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                  
-                        <p class="card-subtitle">Completed: 2024</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="/img/Screenshot 2025-03-14 072835.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Auth</a>
-                      <a href="#" class="span hover-2">#API</a>
-                      <a href="#" class="span hover-2">#Node app</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Secure And Fully functional Authentication 
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                  
-                        <p class="card-subtitle">Completed: 2025</p>
-                      </div>
-                    </div>
-
-                    <a href="https://github.com/TheoInCodeLand/TheoInCodeLand_System" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="https://node-authentication-fx4o.onrender.com/auth/sign-in" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="/img/Screenshot 2025-03-14 073847.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Java</a>
-
-                      <a href="#" class="span hover-2">#Software_Dev</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 months read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Java-Atm-Simulator Application
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrPYCaKX2rBLNV10BOEmf_lrzbxbudvIpaA&s" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                  
-                        <p class="card-subtitle">Completed: 2025</p>
-                      </div>
-                    </div>
-
-                    <a href="https://github.com/TheoInCodeLand/Java-Atm-Simulator" class="card-btn"><i class="fa-brands fa-github"></i> Github</a>
-                    <!-- <a href="#" class="card-btn"><i class="fa-solid fa-globe"></i> Demo</a> -->
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
+            <% } %>
 
           </ul>
 
           <a href="#" class="btn btn-secondary">
             <span class="span">View More Projects</span>
-
             <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
           </a>
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= job ? 'Edit' : 'Add' %> Experience | Admin</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="admin-container">
+        <header class="page-header">
+            <a href="/admin/experience" class="action-btn" style="color: #94a3b8; text-decoration: none;">
+                <i class="fa-solid fa-arrow-left"></i> Back to List
+            </a>
+            <h2><%= job ? 'Edit Experience' : 'Add New Job' %></h2>
+        </header>
+
+        <form action="<%= job ? '/admin/experience/update/' + job.id : '/admin/experience/add' %>" method="POST" class="admin-form">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" name="company" value="<%= job ? job.company_name : '' %>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Position / Role</label>
+                    <input type="text" name="position" value="<%= job ? job.position : '' %>" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" name="location" value="<%= job ? job.location : '' %>" placeholder="e.g. Remote, Johannesburg">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="date" name="start_date" 
+                        value="<%= job && job.start_date ? new Date(job.start_date).toISOString().split('T')[0] : '' %>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>End Date (Leave empty if current)</label>
+                    <input type="date" name="end_date" 
+                        value="<%= job && job.end_date ? new Date(job.end_date).toISOString().split('T')[0] : '' %>">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Job Summary (Short paragraph)</label>
+                <textarea name="description" rows="3" required><%= job ? job.description : '' %></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Key Achievements (Bullet Points)</label>
+                <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Enter each bullet point on a <strong>new line</strong>.</p>
+                <textarea name="bullets_input" rows="6" placeholder="- Built a React App&#10;- Improved SEO by 20%"><%= job && job.bullet_points ? job.bullet_points.join('\n') : '' %></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">
+                <%= job ? 'Update Experience' : 'Save Experience' %>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

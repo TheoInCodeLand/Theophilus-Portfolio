@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= project ? 'Edit' : 'Add' %> Project</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="page-header">
+            <h2><%= project ? 'Edit Project' : 'Add New Project' %></h2>
+            <a href="/admin/projects" class="action-btn">Cancel</a>
+        </header>
+
+        <form action="<%= project ? '/admin/projects/update/' + project.id : '/admin/projects/add' %>" method="POST" enctype="multipart/form-data" class="admin-form">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Project Title</label>
+                    <input type="text" name="title" value="<%= project ? project.title : '' %>" placeholder="e.g. RentGo E-Commerce" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" name="category" value="<%= project ? project.category : '' %>" placeholder="e.g. Full Stack / Mobile App" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="4" placeholder="Describe the project..." required><%= project ? project.description : '' %></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Tech Stack (Comma Separated)</label>
+                    <input type="text" name="tech_stacks" value="<%= project ? project.tech_stacks.join(', ') : '' %>" placeholder="Node.js, React, PostgreSQL" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration (Months)</label>
+                    <input type="number" name="duration" value="<%= project ? project.duration_months : '' %>" placeholder="3" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date Completed</label>
+                    <input type="date" name="date_completed" 
+                        value="<%= project && project.date_completed ? new Date(project.date_completed).toISOString().split('T')[0] : '' %>" required>
+                </div>
+                <div class="form-group">
+                    <label>Project Video/Image (Upload)</label>
+                    <% if (project && project.video_url) { %>
+                        <p style="font-size: 0.8rem; color: #4ade80;">Current file exists. Upload new to replace.</p>
+                    <% } %>
+                    <input type="file" name="projectMedia" accept="image/*,video/*">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>GitHub Link</label>
+                    <input type="url" name="github" value="<%= project ? project.github_link : '' %>" placeholder="https://github.com/..." required>
+                </div>
+                <div class="form-group">
+                    <label>Live Demo Link</label>
+                    <input type="url" name="demo" value="<%= project ? project.demo_link : '' %>" placeholder="https://myapp.onrender.com">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary">
+                <%= project ? 'Update Project' : 'Save Project' %>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
